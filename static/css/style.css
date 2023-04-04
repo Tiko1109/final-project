@@ -1,0 +1,416 @@
+:root {
+    --main-font-en: 'Handlee';
+    --main-font-ge: 'alk-life';
+    --text-color: #545455;
+    --background-color: #fcecec;
+    --size-30: 30px;
+    --size-24: 24px;
+    --size-20: 20px;
+    --size-18: 18px;
+}
+
+@font-face {
+    font-family: 'Handlee';
+    src: url(../fonts/Handlee-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'alk-life';
+    src: url(../fonts/alk_life.otf);
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+body {
+    position: relative;
+}
+
+.animation {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--background-color);
+    padding: 20% 0;
+    display: flex;
+    justify-content: center;
+    animation: disappear 3600s;
+    visibility: collapse;
+}
+
+.animation h1 {
+    font-family: var(--main-font-en);
+    margin: 0;
+    font-size: 100px;
+    color: rgba(225,225,225, .01);
+    background-image: url(../img/backgrounds/bunnies-background.png);
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 900;
+    animation: move 10s ease-in-out;
+}
+    @keyframes move {
+      0%, 100% {
+        background-position: left top;
+      }
+      25%{
+        background-position: right bottom;
+       }
+      50% {
+        background-position: left bottom;
+      }
+      75% {
+        background-position: right top;
+      }
+  }
+
+  @keyframes disappear {
+    0% {
+        visibility: visible;
+        opacity: 1;
+    }
+    0.04% {
+        visibility: visible;
+        opacity: 1;
+    }
+    0.07% {
+        visibility: visible;
+        opacity: 0.5;
+    }
+    0.1% {
+        visibility: collapse;
+        opacity: 0;
+    }
+  }
+
+header {
+    background-color: var(--background-color);
+    border-bottom: 1px solid var(--text-color);
+}
+
+.logo a {
+    display: block;
+    height: 150px;
+}
+
+.logo img {
+    height: 100%;
+    cursor: pointer;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container {
+    padding: 1% 5%;
+}
+
+.languages, .icons {
+    display: flex;
+    align-content: center;
+    width: 5%;
+    justify-content: space-between;
+}
+
+.languages svg {
+    height: 17.6px;
+    width: fit-content;
+}
+
+.icons {
+    height: 150px;
+}
+
+.icons svg {
+    height: 15%;
+    width: fit-content;
+    cursor: pointer;
+}
+
+
+.languages a {
+    font-family: var(--main-font-en);
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.categories {
+    width: 100%;
+    padding: 5% 15%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.category {
+    width: 400px;
+    padding: 5%;
+    border: 1px solid var(--text-color);
+}
+
+.category img {
+    width: 100%;
+    cursor: pointer;
+}
+
+.category h3 {
+    cursor: pointer;
+}
+
+.category a {
+    width: fit-content;
+    height: fit-content;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+h3, h2 {
+    font-family: var(--main-font-ge);
+    font-size: var(--size-30);
+    align-self: center;
+    color: var(--text-color);
+}
+
+.pages {
+    width: 100%;
+    padding: 2% 15% 0;
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+}
+
+.pages a {
+    font-family: var(--main-font-ge);
+    color: var(--text-color);
+    font-size: var(--size-20);
+    text-decoration: none;
+}
+
+.popular, .delivery, .contact {
+    width: 100%;
+    padding: 7% 0;
+}
+
+.popular ul {
+    width: 100%;
+    height: auto;
+    padding: 30px 0;
+    overflow: auto;
+    white-space: nowrap;
+}
+
+.featured-toy {
+    display: inline-block;
+}
+
+.product {
+    margin: 0 2%;
+    width: 300px;
+    padding: 2%;
+    border: 2px solid var(--background-color);
+    transition: 0.2s linear;
+}
+
+.product:hover, .category:hover {
+    box-shadow: 10px 10px 10px #D3D3D3;
+    transition: 0.2s linear;
+}
+
+.product img {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.product span, .product button {
+    font-family: var(--main-font-ge);
+    color: var(--text-color);
+    font-size: var(--size-20);
+}
+
+::-webkit-scrollbar {
+    width: 20px;
+  }
+
+  ::-webkit-scrollbar-track {
+    border-radius: 5px;
+    box-shadow: inset 0 0 1px var(--text-color);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--background-color);
+    border: 1px solid var(--text-color);
+    border-radius: 5px;
+  }
+
+.product a {
+    text-decoration: none;
+}
+
+.product-info {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.product-info button {
+    cursor: pointer;
+    background-color: var(--background-color);
+    text-align: center;
+    border-radius: 10px;
+    width: 32%;
+}
+
+.delivery-info {
+    display: flex;
+    gap: 10%;
+    padding: 30px 0;
+}
+
+.delivery-info svg {
+    width: 100px;
+}
+
+.delivery-info div {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.delivery-info span, .contact address {
+    font-family: var(--main-font-ge);
+    font-size: var(--size-18);
+    color: var(--text-color);
+}
+
+.contact {
+    width: 100%;
+    text-align: center;
+}
+
+.contact div {
+    padding: 30px 0;
+}
+
+.location-map {
+    width: 100%;
+    text-align: center;
+}
+
+footer {
+    background-color: var(--background-color);
+    height: 70px;
+    border-top: 1px solid var(--text-color);
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer svg {
+    width: fit-content;
+    height: 30px;
+}
+
+.bunnies, .other-animals {
+    padding: 5% 0;
+    text-align: center;
+}
+
+.bunnies ul, .other-animals ul {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    row-gap: 50px;
+}
+
+.container h1 {
+    font-family: var(--main-font-ge);
+    color: var(--text-color);
+    font-weight: 900;
+    font-size: var(--size-30);
+    text-align: center;
+    padding-top: 50px;
+}
+
+.product-details {
+    width: 100%;
+    padding: 5% 0;
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+}
+
+.product-image {
+    width: 35%;
+    padding: 1%;
+    border: 1px solid var(--text-color);
+}
+
+.product-details img {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.product-description {
+    width: 50%;
+    font-family: var(--main-font-ge);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    justify-content: center;
+    align-content: center;
+}
+
+.product-description p {
+    width: 100%;
+    padding: 2% 5%;
+    background-color: var(--background-color);
+    border-radius: 20px;
+    font-size: var(--size-20);
+}
+
+.buy {
+    height: 100px;
+    width: 100%;
+    padding: 2% 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--background-color);
+    border-radius: 20px;
+    align-self: center;
+    font-size: var(--size-24);
+    font-weight: 600;
+}
+
+.buy div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.buy span {
+    align-self: center;
+}
+
+.product-description button {
+    padding: 5px;
+    font-family: var(--main-font-ge);
+    font-size: var(--size-20);
+    color: var(--background-color);
+    background-color: var(--text-color);
+    border-radius: 20%;
+    cursor: pointer;
+}
