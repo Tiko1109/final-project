@@ -1,12 +1,9 @@
 var dataReload = document.querySelectorAll("[data-reload")
 
+var findlink = document.getElementById("logoLink")
+var addHash = document.getElementById("cartIcon")
+
 var language = {
-    ka: {
-        title: "იასამნისფერი სათამაშო ბაჭია",
-        button: "შეძენა",
-        productPrice: "ღირებულება",
-        productDesctiption: "რბილი სათამაშო ბაჭია დამზადებულია მაღალი ხარისხის ანტიალერგიული ძაფებისაგან. სიმაღლე: 24სმ. შესაძლებელია გარეცხვა დელიკატურ რეჟიმზე. უსაფრთხოა ბავშვებისათვის"
-    },
     eng: {
         title: "Purple bunny toy",
         button: "buy",
@@ -27,6 +24,9 @@ if (window.location.hash) {
         myfont.forEach((element) => {
             element.style.fontFamily = "Handlee";
         });
+
+        findlink.href = "../../index.html#eng";
+        addHash.href = "../pages/cart.html#eng";
     }
 }
 

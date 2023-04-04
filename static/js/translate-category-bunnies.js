@@ -1,10 +1,20 @@
 var dataReload = document.querySelectorAll("[data-reload")
 
+var findlink = document.getElementById("logoLink")
+var addHash = document.getElementById("cartIcon")
+var productHash1 = document.getElementById("product1")
+var productHash2 = document.getElementById("product2")
+var productHash3 = document.getElementById("product3")
+var productHash4 = document.getElementById("product4")
+var productHash5 = document.getElementById("product5")
+var productHash6 = document.getElementById("product6")
+var productHash7 = document.getElementById("product7")
+var productHash8 = document.getElementById("product8")
+var productHash9 = document.getElementById("product9")
+var productHash10 = document.getElementById("product10")
+var productHash11 = document.getElementById("product11")
+
 var language = {
-    ka: {
-        bunniesPage: "სათამაშო ბაჭიები",
-        button: "შეძენა"
-    },
     eng: {
         bunniesPage: "Bunny toys",
         button: "buy"
@@ -31,6 +41,20 @@ if (window.location.hash) {
         myfont.forEach((element) => {
             element.style.fontFamily = "Handlee";
         });
+        
+        findlink.href = "../../index.html#eng";
+        addHash.href = "../pages/cart.html#eng";
+        productHash1.href = "../pages/product-page.html#eng";
+        productHash2.href = "../pages/product-page.html#eng";
+        productHash3.href = "../pages/product-page.html#eng";
+        productHash4.href = "../pages/product-page.html#eng";
+        productHash5.href = "../pages/product-page.html#eng";
+        productHash6.href = "../pages/product-page.html#eng";
+        productHash7.href = "../pages/product-page.html#eng";
+        productHash8.href = "../pages/product-page.html#eng";
+        productHash9.href = "../pages/product-page.html#eng";
+        productHash10.href = "../pages/product-page.html#eng";
+        productHash11.href = "../pages/product-page.html#eng";
     }
 }
 

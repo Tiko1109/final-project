@@ -1,11 +1,8 @@
 var dataReload = document.querySelectorAll("[data-reload")
 
 var findlink = document.getElementById("logoLink")
-
 var addhash1 = document.getElementById("firstCategory")
-
 var addhash2 = document.getElementById("secondCategory")
-
 var HashFeatured1 = document.getElementById("featuredToy1")
 var HashFeatured2 = document.getElementById("featuredToy2")
 var HashFeatured3 = document.getElementById("featuredToy3")
@@ -13,27 +10,18 @@ var HashFeatured4 = document.getElementById("featuredToy4")
 var HashFeatured5 = document.getElementById("featuredToy5")
 var HashFeatured6 = document.getElementById("featuredToy6")
 var HashFeatured7 = document.getElementById("featuredToy7")
+var cartHash = document.getElementById("cartIcon")
+
 
 
 var language = {
-    ka: {
-        FirstTab: "პოპულარული",
-        SecondTab: "მიტანის სერვისი",
-        ThirdTab: "კონტაქტი",
-        button: "შეძენა",
-        bunnies: "ბაჭიები",
-        animals: "სხვა ცხოველები",
-        popular: "პოპულარული სათამაშოები",
-        tbilisi: "თბილისში მიტანა შესაძლებელია შეკვეთიდან მეორე დღეს. მიტანის ღირებულება ცენტრალურ უბნებში 6 ლარი, ხოლო გარეუბნებში 8 ლარია.",
-        regions: "რეგიონებში სათამაშოები იგზავნება ფოსტით. გაგზავნის ღირებულება ქალაქებში 10 ლარი, ხოლო სოფლებში 12 ლარია. ამანათის ჩამოსვლის დრო დამოკიდებულია რეგიონზე.",
-    },
     eng: {
         FirstTab: "Popular",
         SecondTab: "Delivery Service",
         ThirdTab: "Contact",
         button: "Buy",
         bunnies: "Bunnies",
-        animals: "Other Animals",
+        animals: "Animals",
         popular: "Popular Toys",
         tbilisi: "We are delivering in Tbilisi on a second day from ordering. Delivery price in central parts of city is 6Gel and in outskirts - 8Gel.",
         regions: "We are sending toys in regions by post. Delivery price for towns is 10Gel and for villages 12Gel. The time of delivery depends on the address.",
@@ -59,8 +47,12 @@ if (window.location.hash) {
         deliveryTbilisi.textContent = language.eng.tbilisi;
         deliveryRegions.textContent = language.eng.regions;
         contactSectionTitle.textContent = language.eng.ThirdTab;
+        burgerBunnies.textContent = language.eng.bunnies;
+        burgerAnimals.textContent = language.eng.animals;
+        burgerDelivery.textContent = language.eng.SecondTab;
+        burgerContact.textContent = language.eng.ThirdTab;
 
-        const myfont = document.querySelectorAll("#featuredProducts, #deliveryTab, #contactTab, #buyButton1, #buyButton2, #buyButton3, #buyButton4, #buyButton5, #buyButton6, #buyButton7, #categoryBunnies, #categoryAnimals, #popularToys, #deliverySectionTitle, #deliveryTbilisi, #deliveryRegions, #contactSectionTitle");
+        const myfont = document.querySelectorAll("#burgerContact, #burgerDelivery, #burgerAnimals, #burgerBunnies, #featuredProducts, #deliveryTab, #contactTab, #buyButton1, #buyButton2, #buyButton3, #buyButton4, #buyButton5, #buyButton6, #buyButton7, #categoryBunnies, #categoryAnimals, #popularToys, #deliverySectionTitle, #deliveryTbilisi, #deliveryRegions, #contactSectionTitle");
         
         myfont.forEach((element) => {
             element.style.fontFamily = "Handlee";
@@ -76,6 +68,7 @@ if (window.location.hash) {
             HashFeatured5.href = "static/pages/product-page.html#eng"
             HashFeatured6.href = "static/pages/product-page.html#eng"
             HashFeatured7.href = "static/pages/product-page.html#eng"
+            cartHash.href = "static/pages/cart.html#eng"
     }
 }
 

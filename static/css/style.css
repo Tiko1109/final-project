@@ -342,6 +342,13 @@ h3, h2 {
     padding: 30px 0;
 }
 
+.contact-details {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+
 .location-map {
     width: 100%;
     text-align: center;
@@ -485,7 +492,7 @@ footer svg {
 }
 
 .place-order input {
-    padding: 0.5rem;
+    padding: 0.5rem 1rem;
     border-radius: 20px;
     font-family: var(--main-font-ge);
     font-size: var(--size-18);
