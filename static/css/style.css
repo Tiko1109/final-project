@@ -110,11 +110,11 @@ header {
     padding: 1% 5%;
 }
 
-.languages, .icons {
+.languages {
     display: flex;
     align-content: center;
-    width: 5%;
     justify-content: space-between;
+    gap: 1rem;
 }
 
 .languages svg {
@@ -124,14 +124,56 @@ header {
 
 .icons {
     height: 150px;
+    width: 5%;
+    display: flex;
+    align-content: center;
+    justify-content: flex-end;
+}
+
+.icons a {
+    height: 15%;
+    width: fit-content;
 }
 
 .icons svg {
-    height: 15%;
+    cursor: pointer;
+    height: 100%;
     width: fit-content;
+}
+
+.burger {
+    cursor: pointer;
+    display: none;
+}
+
+.burger div {
+    width: 23px;
+    height: 3px;
+    background: var(--text-color);
+    margin: 0.2rem 0;
+}
+
+.nav-links {
+    min-width: 15%;
+    list-style: none;
+    display: none;
+}
+
+.nav-links li {
+    width: 100%;
+    background-color: var(--text-color);
+    text-align: center;
+    padding: 0.2rem;
+    border-radius: 10px;
     cursor: pointer;
 }
 
+.nav-links li a {
+    text-decoration: none;
+    color: var(--background-color);
+    font-family: var(--main-font-ge);
+    font-size: var(--size-20);
+}
 
 .languages a {
     font-family: var(--main-font-en);
@@ -413,4 +455,108 @@ footer svg {
     background-color: var(--text-color);
     border-radius: 20%;
     cursor: pointer;
+}
+
+.place-order {
+    display: flex;
+    justify-content: center;
+    gap: 20%;
+    width: 100%;
+    padding: 3rem 0;
+}
+
+.place-order label {
+    font-family: var(--main-font-ge);
+    font-size: var(--size-20);
+    color: var(--text-color);
+    text-align: center;
+}
+
+.sender-info div, .recipient-info div {
+    display: flex;
+    flex-direction: column;
+}
+
+.sender-info, .recipient-info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 35%;
+}
+
+.place-order input {
+    padding: 0.5rem;
+    border-radius: 20px;
+    font-family: var(--main-font-ge);
+    font-size: var(--size-18);
+    color: var(--text-color);
+}
+
+.cart-products {
+    padding: 3rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+}
+
+.cart-products div {
+    width: 200px;
+    height: 200px;
+    padding: 1%;
+    border: 1px solid var(--text-color);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-family: var(--main-font-ge);
+    font-size: var(--size-18);
+    color: var(--text-color);
+    gap: 2rem;
+    font-weight: 600;
+}
+
+.cart-products img {
+    width: 100%;
+}
+
+.pay {
+    text-align: center;
+}
+
+.pay button {
+    background-color: var(--text-color);
+    padding: 1rem;
+    border-radius: 20px;
+    font-family: var(--main-font-ge);
+    font-size: var(--size-18);
+    color: var(--background-color);
+    cursor: pointer;
+}
+
+.cart-container {
+    padding-bottom: 7rem;
+}
+
+@media (max-width: 1024px) {
+
+    .burger {
+        display: block;
+    }
+
+    .nav-links.nav-links__active {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 10px;
+    }
+
+    .cart {
+        display: none;
+    }
+
+    .location-map {
+        display: none;
+    }
+    
 }
