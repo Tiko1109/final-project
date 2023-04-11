@@ -10,8 +10,8 @@ var HashFeatured4 = document.getElementById("featuredToy4")
 var HashFeatured5 = document.getElementById("featuredToy5")
 var HashFeatured6 = document.getElementById("featuredToy6")
 var HashFeatured7 = document.getElementById("featuredToy7")
-var cartHash = document.getElementById("cartIcon")
-
+var HashBasketButton1 = document.getElementById("bunnyButton")
+var HashBasketButton2 = document.getElementById("animalButton")
 
 
 var language = {
@@ -25,6 +25,9 @@ var language = {
         popular: "Popular Toys",
         tbilisi: "We are delivering in Tbilisi on a second day from ordering. Delivery price in central parts of city is 6Gel and in outskirts - 8Gel.",
         regions: "We are sending toys in regions by post. Delivery price for towns is 10Gel and for villages 12Gel. The time of delivery depends on the address.",
+        basket: "Basket is empty",
+        basketButton1: "Choose bunny",
+        basketButton2: "Choose other animal"
     }
 };
 
@@ -51,8 +54,11 @@ if (window.location.hash) {
         burgerAnimals.textContent = language.eng.animals;
         burgerDelivery.textContent = language.eng.SecondTab;
         burgerContact.textContent = language.eng.ThirdTab;
+        emptyCart.textContent = language.eng.basket;
+        bunnyButton.textContent = language.eng.basketButton1;
+        animalButton.textContent = language.eng.basketButton2;
 
-        const myfont = document.querySelectorAll("#burgerContact, #burgerDelivery, #burgerAnimals, #burgerBunnies, #featuredProducts, #deliveryTab, #contactTab, #buyButton1, #buyButton2, #buyButton3, #buyButton4, #buyButton5, #buyButton6, #buyButton7, #categoryBunnies, #categoryAnimals, #popularToys, #deliverySectionTitle, #deliveryTbilisi, #deliveryRegions, #contactSectionTitle");
+        const myfont = document.querySelectorAll("#animalButton, #bunnyButton, #emptyCart, #burgerContact, #burgerDelivery, #burgerAnimals, #burgerBunnies, #featuredProducts, #deliveryTab, #contactTab, #buyButton1, #buyButton2, #buyButton3, #buyButton4, #buyButton5, #buyButton6, #buyButton7, #categoryBunnies, #categoryAnimals, #popularToys, #deliverySectionTitle, #deliveryTbilisi, #deliveryRegions, #contactSectionTitle");
         
         myfont.forEach((element) => {
             element.style.fontFamily = "Handlee";
@@ -68,7 +74,8 @@ if (window.location.hash) {
             HashFeatured5.href = "static/pages/product-page.html#eng"
             HashFeatured6.href = "static/pages/product-page.html#eng"
             HashFeatured7.href = "static/pages/product-page.html#eng"
-            cartHash.href = "static/pages/cart.html#eng"
+            HashBasketButton1.href = "static/pages/bunnies.html#eng"
+            HashBasketButton2.href = "static/pages/other-animals.html#eng"
     }
 }
 

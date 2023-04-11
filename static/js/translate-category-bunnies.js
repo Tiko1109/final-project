@@ -1,7 +1,6 @@
 var dataReload = document.querySelectorAll("[data-reload")
 
 var findlink = document.getElementById("logoLink")
-var addHash = document.getElementById("cartIcon")
 var productHash1 = document.getElementById("product1")
 var productHash2 = document.getElementById("product2")
 var productHash3 = document.getElementById("product3")
@@ -13,11 +12,15 @@ var productHash8 = document.getElementById("product8")
 var productHash9 = document.getElementById("product9")
 var productHash10 = document.getElementById("product10")
 var productHash11 = document.getElementById("product11")
+var HashBasketButton1 = document.getElementById("bunnyButton")
+var HashBasketButton2 = document.getElementById("animalButton")
 
 var language = {
     eng: {
         bunniesPage: "Bunny toys",
-        button: "buy"
+        button: "buy",
+        basketButton1: "Choose bunny",
+        basketButton2: "Choose other animal"
     }
 };
 
@@ -35,15 +38,17 @@ if (window.location.hash) {
         buyButton9.textContent = language.eng.button;
         buyButton10.textContent = language.eng.button;
         buyButton11.textContent = language.eng.button;
+        emptyCart.textContent = language.eng.basket;
+        bunnyButton.textContent = language.eng.basketButton1;
+        animalButton.textContent = language.eng.basketButton2;
 
-        const myfont = document.querySelectorAll("#pageBunnies, #buyButton1, #buyButton2, #buyButton3, #buyButton4, #buyButton5, #buyButton6, #buyButton7, #buyButton8, #buyButton9, #buyButton10, #buyButton11");
+        const myfont = document.querySelectorAll("#animalButton, #bunnyButton, #emptyCart, #pageBunnies, #buyButton1, #buyButton2, #buyButton3, #buyButton4, #buyButton5, #buyButton6, #buyButton7, #buyButton8, #buyButton9, #buyButton10, #buyButton11");
         
         myfont.forEach((element) => {
             element.style.fontFamily = "Handlee";
         });
         
         findlink.href = "../../index.html#eng";
-        addHash.href = "../pages/cart.html#eng";
         productHash1.href = "../pages/product-page.html#eng";
         productHash2.href = "../pages/product-page.html#eng";
         productHash3.href = "../pages/product-page.html#eng";
@@ -55,6 +60,8 @@ if (window.location.hash) {
         productHash9.href = "../pages/product-page.html#eng";
         productHash10.href = "../pages/product-page.html#eng";
         productHash11.href = "../pages/product-page.html#eng";
+        HashBasketButton1.href = "static/pages/bunnies.html#eng"
+        HashBasketButton2.href = "static/pages/other-animals.html#eng"
     }
 }
 

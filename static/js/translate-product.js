@@ -2,6 +2,7 @@ var dataReload = document.querySelectorAll("[data-reload")
 
 var findlink = document.getElementById("logoLink")
 var addHash = document.getElementById("cartIcon")
+var addHash2 = document.getElementById("buyA")
 
 var language = {
     eng: {
@@ -27,6 +28,7 @@ if (window.location.hash) {
 
         findlink.href = "../../index.html#eng";
         addHash.href = "../pages/cart.html#eng";
+        addHash2.href = "../pages/cart.html#eng";
     }
 }
 
