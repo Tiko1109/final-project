@@ -1,15 +1,18 @@
 var dataReload = document.querySelectorAll("[data-reload")
 
 var findlink = document.getElementById("logoLink")
-var addHash = document.getElementById("cartIcon")
-var addHash2 = document.getElementById("buyA")
+var HashBasketButton1 = document.getElementById("bunnyButton")
+var HashBasketButton2 = document.getElementById("animalButton")
 
 var language = {
     eng: {
         title: "Purple bunny toy",
         button: "buy",
         productPrice: "Price",
-        productDesctiption: "Soft bunny toy is made of high quality antiallergic yarns. Height: 24cm. Harmless for children."
+        productDesctiption: "Soft bunny toy is made of high quality antiallergic yarns. Height: 24cm. Harmless for children.",
+        basket: "Basket is empty",
+        basketButton1: "Choose bunny",
+        basketButton2: "Choose other animal"
     }
 };
 
@@ -19,16 +22,17 @@ if (window.location.hash) {
         buyButton.textContent = language.eng.button;
         price.textContent = language.eng.productPrice;
         description.textContent = language.eng.productDesctiption;
+        emptyCart.textContent = language.eng.basket;
+        bunnyButton.textContent = language.eng.basketButton1;
+        animalButton.textContent = language.eng.basketButton2;
 
-        const myfont = document.querySelectorAll("#productTitle, #buyButton, #price, #description");
+        const myfont = document.querySelectorAll("#animalButton, #bunnyButton, #emptyCart, #productTitle, #buyButton, #price, #description");
         
         myfont.forEach((element) => {
             element.style.fontFamily = "Handlee";
         });
 
         findlink.href = "../../index.html#eng";
-        addHash.href = "../pages/cart.html#eng";
-        addHash2.href = "../pages/cart.html#eng";
     }
 }
 

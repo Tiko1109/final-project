@@ -11,7 +11,10 @@ var language = {
         bunnies: "Bunnies",
         animals: "Animals",
         title: "Cart",
-        price: "Price",
+        price: "Price:",
+        amount: "Quantity:",
+        cartTotal: "total:",
+        delete: "remove",
         senderName: "Sender's full name",
         recipientName: "Recipient's full name",
         senderPhone: "Sender's phone number",
@@ -37,8 +40,11 @@ if (window.location.hash) {
         LRPhone.textContent = language.eng.recipientPhone;
         LRAddress.textContent = language.eng.recipientAddress;
         cartPay.textContent = language.eng.payment;
+        cartAmount.textContent = language.eng.amount;
+        total.textContent = language.eng.cartTotal;
+        remove.textContent = language.eng.delete
 
-        const myfont = document.querySelectorAll("#cartPay, #LRAddress, #LRPhone, #LRName, #LSEmail, #LSPhone, #LSName, #adress, #rphone, #rname, #email, #phone, #sname, #cartPrice, #cartTitle, #burgerContact, #burgerDelivery, #burgerAnimals, #burgerBunnies");
+        const myfont = document.querySelectorAll("#remove, #total, #cartAmount, #cartPay, #LRAddress, #LRPhone, #LRName, #LSEmail, #LSPhone, #LSName, #adress, #rphone, #rname, #email, #phone, #sname, #cartPrice, #cartTitle, #burgerContact, #burgerDelivery, #burgerAnimals, #burgerBunnies");
         
         myfont.forEach((element) => {
             element.style.fontFamily = "Handlee";

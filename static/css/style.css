@@ -546,6 +546,10 @@ footer svg {
     color: var(--text-color);
 }
 
+.cart {
+    text-decoration: none;
+}
+
 .cart-products {
     padding: 3rem 0;
     display: flex;
@@ -553,7 +557,7 @@ footer svg {
     gap: 5%;
 }
 
-.cart-products div {
+.cart-details, .cart-product-image {
     width: 200px;
     height: 200px;
     padding: 0.5rem;
@@ -566,12 +570,13 @@ footer svg {
     font-family: var(--main-font-ge);
     font-size: var(--size-18);
     color: var(--text-color);
-    gap: 2rem;
+    gap: 1rem;
     font-weight: 600;
 }
 
 .cart-products img {
     width: 100%;
+    border-radius: 20px;
 }
 
 .pay {
@@ -650,6 +655,24 @@ footer svg {
   color: #000;
   text-decoration: none;
   cursor: pointer;
+}
+
+.counter {
+    font-family: var(--main-font-ge);
+    color: var(--text-color);
+    font-size: var(--size-18);
+}
+
+.total span {
+    font-size: var(--size-20);
+    color: green;
+}
+
+.cart-products button {
+    font-family: var(--main-font-ge);
+    font-size: 12px;
+    color: var(--text-color);
+    cursor: pointer;
 }
 
 @media (max-width: 1192px) {

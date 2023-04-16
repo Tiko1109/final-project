@@ -7,29 +7,55 @@ function navActiveToggler() {
 
 navBurger.addEventListener("click", navActiveToggler);
 
+let btn1 = document.getElementById('buyButton')
+var counters = document.querySelectorAll(".counter");
+var addHref = document.getElementById("cartIcon");
 
-// Get the modal
-var modal = document.getElementById("myModal");
-
-// Get the button that opens the modal
-var btn = document.getElementById("cartIcon");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks the button, open the modal 
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
+if (btn1 !== null) {
+  btn1.addEventListener("click", btn1Count);
+  function btn1Count () {
+    counters[0].textContent = parseInt(counters[0].textContent) + 1;
+    var spanText = document.querySelector(".counter-active").innerHTML;
+    localStorage.setItem("Quantity",spanText)
+    location.reload()
   }
 }
+
+document.querySelector(".counter").innerHTML = localStorage.getItem("Quantity");
+
+var amount = document.querySelector(".counter-active").innerHTML;
+
+if (amount !== '0') {
+  document.getElementById('myModal').remove();
+  if (window.location.hash === "#eng") {
+    addHref.href = "../pages/cart.html#eng";
+  }
+  else {
+    addHref.href = "../pages/cart.html";
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
