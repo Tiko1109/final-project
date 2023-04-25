@@ -19,6 +19,7 @@ var language = {
     eng: {
         bunniesPage: "Bunny toys",
         button: "buy",
+        basket: "Basket is empty",
         basketButton1: "Choose bunny",
         basketButton2: "Choose other animal"
     }

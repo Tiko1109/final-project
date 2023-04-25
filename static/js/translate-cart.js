@@ -13,7 +13,7 @@ var language = {
         title: "Cart",
         price: "Price:",
         amount: "Quantity:",
-        cartTotal: "total:",
+        cartTotal: "Total:",
         delete: "remove",
         senderName: "Sender's full name",
         recipientName: "Recipient's full name",

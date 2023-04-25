@@ -14,7 +14,7 @@ document.querySelector(".counter").innerHTML = localStorage.getItem("Quantity");
 
 var amount = document.querySelector(".counter").innerHTML;
 var addHref = document.getElementById("cartIcon")
-console.log(amount);
+
 if (amount != '0') {
   addHref.href = "static/pages/cart.html"
 }
