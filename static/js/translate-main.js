@@ -29,7 +29,8 @@ var language = {
         regions: "We are sending toys in regions by post. Delivery price for towns is 10Gel and for villages 12Gel. The time of delivery depends on the address.",
         basket: "Basket is empty",
         basketButton1: "Choose bunny",
-        basketButton2: "Choose other animal"
+        basketButton2: "Choose other animal",
+        authorization: "Log in"
     }
 };
 
@@ -61,8 +62,9 @@ if (window.location.hash) {
         emptyCart.textContent = language.eng.basket;
         bunnyButton.textContent = language.eng.basketButton1;
         animalButton.textContent = language.eng.basketButton2;
+        login.textContent = language.eng.authorization;
 
-        const myfont = document.querySelectorAll("#phone, #mail, #termsTab, #animalButton, #bunnyButton, #emptyCart, #burgerQuestions, #burgerContact, #burgerDelivery, #burgerAnimals, #burgerBunnies, #featuredProducts, #questionsTab, #deliveryTab, #contactTab, #buyButton1, #buyButton2, #buyButton3, #buyButton4, #buyButton5, #buyButton6, #buyButton7, #categoryBunnies, #categoryAnimals, #popularToys, #deliverySectionTitle, #deliveryTbilisi, #deliveryRegions, #contactSectionTitle");
+        const myfont = document.querySelectorAll("#phone, #mail, #termsTab, #animalButton, #bunnyButton, #emptyCart, #burgerQuestions, #burgerContact, #burgerDelivery, #burgerAnimals, #burgerBunnies, #featuredProducts, #questionsTab, #deliveryTab, #contactTab, #buyButton1, #buyButton2, #buyButton3, #buyButton4, #buyButton5, #buyButton6, #buyButton7, #categoryBunnies, #categoryAnimals, #popularToys, #deliverySectionTitle, #deliveryTbilisi, #deliveryRegions, #contactSectionTitle, #login");
         
         myfont.forEach((element) => {
             element.style.fontFamily = "Handlee";
