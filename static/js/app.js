@@ -15,7 +15,7 @@ if (btn1 !== null) {
   btn1.addEventListener("click", btn1Count);
   function btn1Count () {
     counters[0].textContent = parseInt(counters[0].textContent) + 1;
-    var spanText = document.querySelector(".counter-active").innerHTML;
+    var spanText = document.querySelector(".counter").innerHTML;
     localStorage.setItem("Quantity",spanText)
     location.reload()
   }
@@ -23,7 +23,7 @@ if (btn1 !== null) {
 
 document.querySelector(".counter").innerHTML = localStorage.getItem("Quantity");
 
-var amount = document.querySelector(".counter-active").innerHTML;
+var amount = document.querySelector(".counter").innerHTML;
 
 if (amount !== '0') {
   document.getElementById('myModal').remove();

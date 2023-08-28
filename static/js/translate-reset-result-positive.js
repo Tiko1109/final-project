@@ -11,13 +11,8 @@ var language = {
         ThirdTab: "Contact",
         additionalTab: "Questions",
         conditionsTab: "Terms and Conditions",
-        title: "Purple bunny toy",
-        button: "buy",
-        productPrice: "Price",
-        productDesctiption: "Soft bunny toy is made of high quality antiallergic yarns. Height: 24cm. Harmless for children.",
-        basket: "Basket is empty",
-        basketButton1: "Choose bunny",
-        basketButton2: "Choose other animal"
+        positive: "Please check the email",
+        details: "Password recovery instructions have been sent to your email. Please check. If you can't find the mail in your inbox, check your spam folder just in case."
     }
 };
 
@@ -28,15 +23,10 @@ if (window.location.hash) {
         contactTab.textContent = language.eng.ThirdTab;
         questionsTab.textContent = language.eng.additionalTab;
         termsTab.textContent = language.eng.conditionsTab;
-        productTitle.textContent = language.eng.title;
-        buyButton.textContent = language.eng.button;
-        price.textContent = language.eng.productPrice;
-        description.textContent = language.eng.productDesctiption;
-        emptyCart.textContent = language.eng.basket;
-        bunnyButton.textContent = language.eng.basketButton1;
-        animalButton.textContent = language.eng.basketButton2;
+        check.textContent = language.eng.positive;
+        instructions.textContent = language.eng.details;
 
-        const myfont = document.querySelectorAll("#featuredProducts, #deliveryTab, #contactTab, #questionsTab, #termsTab, #animalButton, #bunnyButton, #emptyCart, #productTitle, #buyButton, #price, #description");
+        const myfont = document.querySelectorAll("#instructions, #check, #featuredProducts, #deliveryTab, #contactTab, #questionsTab, #termsTab");
         
         myfont.forEach((element) => {
             element.style.fontFamily = "Handlee";

@@ -6,18 +6,14 @@ var HashBasketButton2 = document.getElementById("animalButton")
 
 var language = {
     eng: {
+        errorTitle: "Page was not found",
+        errorText: "The page you are trying to access is unavailable. Please return to",
+        mainPage: "Main Page",
         FirstTab: "Popular",
         SecondTab: "Delivery Service",
         ThirdTab: "Contact",
         additionalTab: "Questions",
-        conditionsTab: "Terms and Conditions",
-        title: "Purple bunny toy",
-        button: "buy",
-        productPrice: "Price",
-        productDesctiption: "Soft bunny toy is made of high quality antiallergic yarns. Height: 24cm. Harmless for children.",
-        basket: "Basket is empty",
-        basketButton1: "Choose bunny",
-        basketButton2: "Choose other animal"
+        conditionsTab: "Terms and Conditions"
     }
 };
 
@@ -28,15 +24,12 @@ if (window.location.hash) {
         contactTab.textContent = language.eng.ThirdTab;
         questionsTab.textContent = language.eng.additionalTab;
         termsTab.textContent = language.eng.conditionsTab;
-        productTitle.textContent = language.eng.title;
-        buyButton.textContent = language.eng.button;
-        price.textContent = language.eng.productPrice;
-        description.textContent = language.eng.productDesctiption;
-        emptyCart.textContent = language.eng.basket;
-        bunnyButton.textContent = language.eng.basketButton1;
-        animalButton.textContent = language.eng.basketButton2;
+        titleerror.textContent = language.eng.errorTitle;
+        texterror.textContent = language.eng.errorText;
+        actionerror.textContent = language.eng.mainPage;
+ 
 
-        const myfont = document.querySelectorAll("#featuredProducts, #deliveryTab, #contactTab, #questionsTab, #termsTab, #animalButton, #bunnyButton, #emptyCart, #productTitle, #buyButton, #price, #description");
+        const myfont = document.querySelectorAll("#titleerror, #texterror, #actionerror, #featuredProducts, #deliveryTab, #contactTab, #questionsTab, #termsTab");
         
         myfont.forEach((element) => {
             element.style.fontFamily = "Handlee";

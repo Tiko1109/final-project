@@ -6,6 +6,11 @@ var HashBasketButton2 = document.getElementById("animalButton")
 
 var language = {
     eng: {
+        FirstTab: "Popular",
+        SecondTab: "Delivery Service",
+        ThirdTab: "Contact",
+        additionalTab: "Questions",
+        conditionsTab: "Terms and Conditions",
         conditions: "Terms and conditions",
         paragraph1: "Article 1.",
         paragraph2: "Article 2.",
@@ -28,6 +33,11 @@ var language = {
 
 if (window.location.hash) {
     if (window.location.hash === "#eng") {
+        featuredProducts.textContent = language.eng.FirstTab;
+        deliveryTab.textContent = language.eng.SecondTab;
+        contactTab.textContent = language.eng.ThirdTab;
+        questionsTab.textContent = language.eng.additionalTab;
+        termsTab.textContent = language.eng.conditionsTab;
         terms.textContent = language.eng.conditions;
         article1.textContent = language.eng.paragraph1;
         article2.textContent = language.eng.paragraph2;
@@ -46,7 +56,7 @@ if (window.location.hash) {
         article4first.textContent = language.eng.paragraph4first;
         article4second.textContent = language.eng.paragraph4second;      
 
-        const myfont = document.querySelectorAll("#terms, #article1, #article2, #article3, #article4, #preamble1, #preamble2, #article1first, #article2first, #article2second, #article2third, #article2fourth, #article2fifth, #article3first, #article3second, #article4first, #article4second");
+        const myfont = document.querySelectorAll("#featuredProducts, #deliveryTab, #contactTab, #questionsTab, #termsTab, #terms, #article1, #article2, #article3, #article4, #preamble1, #preamble2, #article1first, #article2first, #article2second, #article2third, #article2fourth, #article2fifth, #article3first, #article3second, #article4first, #article4second");
         
         myfont.forEach((element) => {
             element.style.fontFamily = "Handlee";

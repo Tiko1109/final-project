@@ -11,13 +11,13 @@ var language = {
         ThirdTab: "Contact",
         additionalTab: "Questions",
         conditionsTab: "Terms and Conditions",
-        title: "Purple bunny toy",
-        button: "buy",
-        productPrice: "Price",
-        productDesctiption: "Soft bunny toy is made of high quality antiallergic yarns. Height: 24cm. Harmless for children.",
-        basket: "Basket is empty",
-        basketButton1: "Choose bunny",
-        basketButton2: "Choose other animal"
+        auth: "Login",
+        username: "User",
+        password: "Password",
+        notRegistered: "Don't have an account yet?",
+        registration: "Register here",
+        forgotPass: "Forgot password?",
+        recover: "Recover it here"
     }
 };
 
@@ -28,15 +28,17 @@ if (window.location.hash) {
         contactTab.textContent = language.eng.ThirdTab;
         questionsTab.textContent = language.eng.additionalTab;
         termsTab.textContent = language.eng.conditionsTab;
-        productTitle.textContent = language.eng.title;
-        buyButton.textContent = language.eng.button;
-        price.textContent = language.eng.productPrice;
-        description.textContent = language.eng.productDesctiption;
-        emptyCart.textContent = language.eng.basket;
-        bunnyButton.textContent = language.eng.basketButton1;
-        animalButton.textContent = language.eng.basketButton2;
+        login.textContent = language.eng.auth;
+        user.textContent = language.eng.username;
+        pass.textContent = language.eng.password;
+        logbtn.textContent = language.eng.auth;
+        question1.textContent = language.eng.notRegistered;
+        reg.textContent = language.eng.registration;
+        question2.textContent = language.eng.forgotPass;
+        rec.textContent = language.eng.recover;
+    
 
-        const myfont = document.querySelectorAll("#featuredProducts, #deliveryTab, #contactTab, #questionsTab, #termsTab, #animalButton, #bunnyButton, #emptyCart, #productTitle, #buyButton, #price, #description");
+        const myfont = document.querySelectorAll("#reg, #rec, #question1, #question2, #logbtn, #login, #user, #pass, #featuredProducts, #deliveryTab, #contactTab, #questionsTab, #termsTab");
         
         myfont.forEach((element) => {
             element.style.fontFamily = "Handlee";
